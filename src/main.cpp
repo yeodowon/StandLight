@@ -1,9 +1,9 @@
 #include <iostream>
 #include <wiringPi.h>
 #include "Listener.h"
+#include "Controller.h" 
 #include "Button.h"
 #include "Led.h"
-
 
 
 
@@ -14,7 +14,9 @@ int main()
     
     Button button1(27); //의미부여(추상화)
     Led led1(25);// Led인데 light라는 이름을 주었다(의미부여)
-    Listener listener(&button1, &led1); 
+    Controller conrtol(&led1);
+    Listener listener(&button1, &conrtol); 
+    
     while (1)
     {
         listener.checkEvent();
