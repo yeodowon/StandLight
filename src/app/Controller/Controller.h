@@ -3,20 +3,20 @@
 
 #pragma once
 
-#include <iostream>
-#include "Led.h"
+#include <string>
+#include "View.h"
 
-enum {LIGHT_OFF, LIGHT_ON};
+
 
 
 class Controller
 {
 private:
     int lightState;
-    Led *light;
+    View *view;
 
 public:
-    Controller(Led *Led);
+    Controller(View *viewer);
     virtual ~Controller(); //virtual 다형성할때 필요
     void updateEvent(std::string strBtn);
 

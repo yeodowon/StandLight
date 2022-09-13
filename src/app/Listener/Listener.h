@@ -3,6 +3,7 @@
 
 #include "Button.h" //Button에 의존한다.
 #include "Controller.h"  //Led에 의존한다.
+#include<iostream>
 
 #pragma once
 
